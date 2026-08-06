@@ -66,3 +66,37 @@ flowchart TD
 6. MongoDB Atlas Free returns the operation result to the backend.
 7. The backend sends a JSON response to the frontend.
 8. The frontend displays a confirmation message and updates the user's registration status.
+## 7. Database Plan
+
+### Proposed Database Name
+
+```text
+event_management_db
+```
+
+### Primary Collection
+
+```text
+events
+```
+
+### Proposed Fields
+
+| Field       | Type     | Description                     |
+| ----------- | -------- | ------------------------------- |
+| _id         | ObjectId | Unique event identifier         |
+| title       | String   | Event title                     |
+| description | String   | Event description               |
+| eventDate   | Date     | Scheduled date of the event     |
+| location    | String   | Event venue or location         |
+| status      | String   | Current event status            |
+| createdAt   | Date     | Date the event was created      |
+| updatedAt   | Date     | Date the event was last updated |
+## 8. Design Justification
+Explain why the three-tier architecture is appropriate for the proposed
+system. Discuss how separating the frontend, backend, and database can
+improve maintainability, security, testing, and future development.
+## 9. Architectural Limitations
+The current activity focuses only on the proposed architecture. Frontend
+code, backend code, database connection, user authentication, and deployment
+have not yet been implemented. These components will be developed in Module 7.
