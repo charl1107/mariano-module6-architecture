@@ -38,3 +38,10 @@ responsibilities:
 - Retrieve data
 - Update data
 - Delete data
+## 4. Component Responsibilities
+| Component | Technology | Responsibility |
+|---|---|---|
+| User interface | Vue.js | Displays data and collects user input |
+| Application server | Node.js and Express | Processes requests and applies business rules |
+| Database | MongoDB Atlas Free | Stores and manages system records |
+| Repository | GitHub | Stores documentation and tracks changes |
