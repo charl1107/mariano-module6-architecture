@@ -45,3 +45,24 @@ responsibilities:
 | Application server | Node.js and Express | Processes requests and applies business rules |
 | Database | MongoDB Atlas Free | Stores and manages system records |
 | Repository | GitHub | Stores documentation and tracks changes |
+## 5. System Architecture Diagram
+```mermaid
+flowchart TD
+    U[Event Organizer / Participant]
+    U -->|Create Event<br/>Register<br/>View Events| F[Vue.js Frontend]
+    F -->|HTTP Request| B[Node.js & Express Backend]
+    B -->|Create / Read / Update / Delete| D[(MongoDB Atlas Free)]
+    D -->|Event & User Data| B
+    B -->|JSON Response| F
+    F -->|Display Events, Registration Status,<br/>Attendance, Reports| U
+```  
+## 6. Data Flow
+### Example Process: Register for an Event
+1. The user selects an event and fills out the registration form through the Vue.js interface.
+2. Vue.js validates the required input fields.
+3. The frontend sends an HTTP request to the Node.js and Express backend.
+4. The backend validates the submitted information and applies the system's business rules.
+5. The backend stores the registration details in MongoDB Atlas Free.
+6. MongoDB Atlas Free returns the operation result to the backend.
+7. The backend sends a JSON response to the frontend.
+8. The frontend displays a confirmation message and updates the user's registration status.
